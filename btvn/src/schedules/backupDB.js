@@ -40,7 +40,6 @@ async function backupDB() {
         // Nếu thành công!
         if (code === 0) {
             console.log("Backup thành công!");
-            const copyCmd = `rclone copy ${backupLocalDir} ${backupRemoteName}:${backupRemoteDir}`;
 
             // Backup lên Google Drive
             await pushDBOnGoogleDrive();
